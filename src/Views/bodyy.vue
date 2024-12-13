@@ -1,25 +1,25 @@
 <template>
     <div class="app">
-      <!-- Starry Background -->
-      <canvas ref="starCanvas" class="absolute inset-0"></canvas>
-  
-      <!-- Content Area -->
-      <div class="relative z-10 text-white text-center p-8">
-        <h1 class="text-5xl font-bold mb-4">Welcome to the Quotes Generator</h1>
-        <p class="text-lg">
-          Discover inspirational quotes and let the stars guide your thoughts.
-        </p>
-        <!-- Moon Button -->
-        <moonButton @quote-generated="generateQuote" />
-  
-        <!-- Display Generated Quote -->
-       <div v-if="currentQuote" class="text-xl font-semibold mt-6 max-w-xl mx-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-6 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl">
-         <p class="text-white text-center text-2xl mb-4 italic">"{{ currentQuote.content }}"</p>
-         <p class="text-white text-center text-lg">— {{ currentQuote.author }}</p>
-       </div>
+  <!-- Starry Background -->
+  <canvas ref="starCanvas" class="absolute inset-0"></canvas>
 
-      </div>
+  <!-- Content Area -->
+  <div class="relative z-10 text-white text-center p-4 sm:p-8">
+    <h1 class="text-3xl sm:text-5xl font-bold mb-4">Welcome to the Quotes Generator</h1>
+    <p class="text-sm sm:text-lg">
+      Discover inspirational quotes and let the stars guide your thoughts.
+    </p>
+    <!-- Moon Button -->
+    <moonButton @quote-generated="generateQuote" />
+
+    <!-- Display Generated Quote -->
+    <div v-if="currentQuote" class="text-xl font-semibold mt-6 max-w-lg sm:max-w-xl mx-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-6 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl">
+      <p class="text-white text-center text-lg sm:text-2xl mb-4 italic">"{{ currentQuote.content }}"</p>
+      <p class="text-white text-center text-sm sm:text-lg">— {{ currentQuote.author }}</p>
     </div>
+  </div>
+</div>
+
   </template>
   
   <script>

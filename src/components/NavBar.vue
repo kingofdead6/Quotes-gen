@@ -10,31 +10,11 @@
       <h1 class="text-2xl font-bold ml-4">
         <slot name="logo">Quotes Generator</slot>
       </h1>
-      <!-- Menu Links -->
-      <ul class="flex gap-4 text-[25px] mr-[500px]">
-        <li v-for="(link, index) in links" :key="index">
-          <a :href="link.href" class="hover:text-gray-400">{{ link.label }}</a>
-        </li>
-      </ul>
+   
     </nav>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    links: {
-      type: Array,
-      required: true,
-      default: () => [
-        { label: "Home", href: "#" },
-        { label: "About", href: "#" },
-        { label: "Contact", href: "#" },
-      ],
-    },
-  },
-};
-</script>
 
 <style scoped>
 

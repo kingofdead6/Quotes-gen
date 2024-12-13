@@ -1,11 +1,12 @@
 <template>
     <button
-      class="moon-button p-5 bg-[#240345] rounded-full shadow-lg text-4xl text-white hover:scale-110 focus:outline-none transition-all"
+      class="moon-button p-4 sm:p-5 bg-[#240345] rounded-full shadow-lg text-3xl sm:text-4xl text-white hover:scale-110 focus:outline-none transition-all"
       @click="generateQuote"
     >
       Generate Quote
     </button>
   </template>
+  
   
   <script>
   export default {
